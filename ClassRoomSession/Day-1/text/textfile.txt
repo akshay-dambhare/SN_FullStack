@@ -1,0 +1,96 @@
+// objectdemo2.js
+============================================================================
+function comp(){
+const udata= new Object()
+
+udata.uname='admin'
+udata.city='pune'
+
+showdata= function(){
+    document.getElementById('show').innerHTML=udata.uname + " " + udata.city
+}
+udata.showdata()
+}
+
+=============================================================================
+//callbackhell.js
+
+const getUser = (id, callbackDemo) => {
+  setTimeout(() => {
+    console.log("Getting the User from the database");
+    callbackDemo({
+      id: id,
+      name: "Amar",
+    });
+  }, 2000);
+};
+
+
+const loadBlogs = (username, callbackDemo) => {
+    setTimeout(() => {
+      console.log("Getting Twitter REST API to lad the posts");
+      callbackDemo(['Post-1','Post-2','Post-3']);
+    }, 2000);
+  };
+  
+  const loadComments = (post, callbackDemo) => {
+    setTimeout(() => {
+      console.log("Getting Twitter to load the comments");
+      callbackDemo(['comments for ' + post]);
+    }, 2000);
+  };
+  
+  getUser(101,(user) => {
+      loadBlogs(user.name,(blogs) =>{
+          loadComments(blogs[0] ,(comments) =>{
+              console.log(user,blogs[0],comments);
+              
+          })
+      })
+  })
+  ===========================================================================================
+  monday time make all 4 corners are rounded 
+     
+   light purple
+   newssection  
+   news articls rgba and background gradient
+   footer box shadow
+   monday time text shadow
+
+
+git hub is a cloude based tool .
+
+git hub 
+git lab 
+bit bucket
+
+git init 
+
+
+
+git config --global user.name " "
+git config --global user.email " "
+
+git config --list
+
+git remote -v
+git remote add origin https://github.com/akshay-dambhare/sn_training.git 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
